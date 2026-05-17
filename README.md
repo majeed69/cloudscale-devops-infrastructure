@@ -1,107 +1,127 @@
 # CloudScale DevOps Infrastructure on AWS
 
-Production-style DevOps infrastructure project built using AWS, Docker, Nginx, GitHub Actions, and Application Load Balancer (ALB).
+A full-stack cloud-native DevOps project built on AWS using Docker, Nginx, PostgreSQL, Node.js, GitHub Actions CI/CD, and Application Load Balancer (ALB).
+
+This project demonstrates real-world DevOps concepts including containerization, reverse proxy configuration, CI/CD automation, cloud deployment, load balancing, persistent storage, and full-stack authentication architecture.
 
 ---
 
-## 🚀 Project Overview
+# 🚀 Features
 
-CloudScale is a cloud-native DevOps infrastructure project demonstrating modern deployment practices, CI/CD automation, reverse proxy architecture, Docker containerization, and AWS load balancing.
-
-The project simulates a production-ready multi-service architecture using AWS EC2, Docker containers, Nginx reverse proxy, and GitHub Actions for automated deployments.
-
----
-
-## 🏗️ Architecture
-
-Users
-↓
-AWS Application Load Balancer (ALB)
-↓
-Nginx Reverse Proxy
-↓
-Docker Containers
-├── Portfolio Service
-└── Monitoring Service
+* Full-stack authentication system
+* Frontend login interface
+* Backend authentication API using Node.js and Express.js
+* PostgreSQL database integration
+* Persistent database storage using Docker Volumes
+* Dockerized multi-container architecture
+* Nginx reverse proxy with path-based routing
+* GitHub Actions CI/CD pipeline
+* AWS EC2 deployment
+* AWS Application Load Balancer (ALB)
+* Health checks and traffic routing
+* Linux server administration
 
 ---
 
-## ⚡ Features
+# 🏗️ Architecture
 
-- AWS EC2 Deployment
-- Docker Containerization
-- Nginx Reverse Proxy
-- Path-Based Routing
-- GitHub Actions CI/CD
-- Application Load Balancer (ALB)
-- Health Checks & Target Groups
-- Automated Deployment Pipeline
-- Multi-Service Architecture
-- Linux Server Administration
+User → AWS ALB → Nginx Reverse Proxy → Frontend → Backend API → PostgreSQL Database
 
 ---
 
-## 🛠️ Technologies Used
+# 🛠️ Technologies Used
 
-### Cloud
-- AWS EC2
-- AWS Application Load Balancer
-- AWS Target Groups
-- AWS Security Groups
-
-### DevOps
-- Git
-- GitHub
-- GitHub Actions
-- CI/CD Pipelines
-
-### Containers
-- Docker
-- Docker Images
-- Docker Containers
-
-### Web & Networking
-- Nginx
-- Reverse Proxy
-- Path-Based Routing
-- HTTP Networking
-
-### Operating System
-- Ubuntu Linux
+* AWS EC2
+* AWS Application Load Balancer (ALB)
+* Docker
+* Docker Compose
+* Nginx
+* PostgreSQL
+* Node.js
+* Express.js
+* GitHub Actions
+* Git
+* Linux (Ubuntu)
+* CI/CD
 
 ---
 
-## 🚀 Deployment Workflow
+# 🚀 Project Structure
 
-1. Developer pushes code to GitHub
-2. GitHub Actions triggers CI/CD pipeline
-3. Workflow connects to AWS EC2 using SSH
-4. Updated code is deployed automatically
-5. Docker containers serve applications
-6. Nginx routes traffic to services
-7. AWS ALB distributes incoming traffic
+cloudscale-devops-infrastructure/
+
+├── backend/
+
+├── monitoring/
+
+├── portfolio/
+
+├── docker-compose.yml
+
+├── README.md
+
+└── .github/workflows/
 
 ---
 
-## 🌐 Services
+# 🔐 Authentication
 
-- /portfolio → Portfolio Service
-- /monitoring → Monitoring Service
+The project includes a fully functional authentication system:
+
+* Frontend Login Page
+* Backend API Validation
+* PostgreSQL Database Verification
+* Success and Invalid Credential Handling
 
 ---
 
-## 🎯 Learning Outcomes
+# 🚀 CI/CD Workflow
 
-This project helped strengthen practical knowledge of:
+1. Code pushed to GitHub
+2. GitHub Actions pipeline triggered
+3. Application deployed to AWS EC2
+4. Docker containers rebuilt and restarted
+5. Updated application served through Nginx and ALB
 
-- AWS Cloud Infrastructure
-- Linux Administration
-- Docker Containerization
-- Reverse Proxy Architecture
-- CI/CD Automation
-- GitHub Actions
-- Load Balancing
-- Cloud Networking
-- DevOps Best Practices
+---
+
+# 📦 Docker Services
+
+* Frontend Container
+* Backend API Container
+* PostgreSQL Database Container
+
+---
+
+# 💾 Persistent Storage
+
+PostgreSQL database persistence is configured using Docker Volumes to prevent data loss during container restarts.
+
+---
+
+# 🧠 Key DevOps Concepts Demonstrated
+
+* Infrastructure Deployment
+* Containerization
+* Reverse Proxy Configuration
+* CI/CD Automation
+* Load Balancing
+* Docker Networking
+* Persistent Volumes
+* Linux Server Administration
+* Application Debugging
+* Cloud Architecture
+
+---
+
+# 🚀 Future Improvements
+
+* HTTPS with SSL/TLS
+* JWT Authentication
+* Password Hashing
+* Auto Scaling
+* Prometheus & Grafana Monitoring
+* Kubernetes Deployment
+* Custom Domain Integration
 
 ---
